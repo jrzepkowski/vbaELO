@@ -1,0 +1,219 @@
+Sub Przycisk1_Kliknięcie()
+Dim rankinga As Double
+Dim rankingb As Double
+Dim rankingc As Double
+Dim rankingd As Double
+Dim kf As Double
+Dim ratinga As Double
+Dim ratingb As Double
+Dim ratingc As Double
+Dim ratingd As Double
+Dim wina As Double
+Dim winb As Double
+Dim add As Double
+Dim down As Double
+rankinga = Worksheets("wzor").Range("E11")
+rankingb = Worksheets("wzor").Range("F11")
+rankingc = Worksheets("wzor").Range("G11")
+rankingd = Worksheets("wzor").Range("H11")
+ratinga = 10 ^ (rankinga / 400)
+ratingb = 10 ^ (rankingb / 400)
+ratingc = 10 ^ (rankingc / 400)
+ratingd = 10 ^ (rankingd / 400)
+kf = 40
+
+
+
+wina = ratinga / (ratinga + ratingd)
+winb = ratingd / (ratinga + ratingd)
+
+rankinga = rankinga + kf * (1 - wina)
+'MsgBox rankinga
+rankingd = rankingd - kf * winb
+'MsgBox rankingd
+ratinga = 10 ^ (rankinga / 400)
+ratingd = 10 ^ (rankingd / 400)
+wina = ratingb / (ratingb + ratingd)
+winb = ratingd / (ratingb + ratingd)
+'MsgBox wina & "   " & winb
+rankingb = rankingb + kf * (1 - wina)
+rankingd = rankingd - kf * winb
+'MsgBox rankingb & "     " & rankingd
+ratingb = 10 ^ (rankingb / 400)
+ratingd = 10 ^ (rankingd / 400)
+'MsgBox ratingb & "    " & ratingd
+wina = ratingc / (ratingc + ratingd)
+winb = ratingd / (ratingc + ratingd)
+rankingc = rankingc + kf * (1 - wina)
+rankingd = rankingd - kf * winb
+'MsgBox wina
+'MsgBox winb
+'MsgBox rankingc
+'MsgBox rankingd
+ratingc = 10 ^ (rankingc / 400)
+ratingd = 10 ^ (rankingd / 400)
+'MsgBox ratingc
+'MsgBox ratingd
+wina = ratinga / (ratinga + ratingc)
+winb = ratingc / (ratinga + ratingc)
+rankinga = rankinga + kf * (1 - wina)
+rankingc = rankingc - kf * winb
+'MsgBox rankinga
+'MsgBox rankingc
+ratinga = 10 ^ (rankinga / 400)
+ratingb = 10 ^ (rankingb / 400)
+ratingc = 10 ^ (rankingc / 400)
+ratingd = 10 ^ (rankingd / 400)
+'MsgBox ratinga
+'MsgBox ratingb
+'MsgBox ratingc
+'MsgBox ratingd
+wina = ratingb / (ratingb + ratingc)
+winb = ratingc / (ratingb + ratingc)
+
+rankingb = rankingb + kf * (1 - wina)
+rankingc = rankingc - kf * winb
+'MsgBox rankingb
+'MsgBox rankingc
+ratingb = 10 ^ (rankingb / 400)
+ratingc = 10 ^ (rankingc / 400)
+'MsgBox ratingb
+'MsgBox ratingc
+wina = ratinga / (ratinga + ratingb)
+winb = ratingb / (ratinga + ratingb)
+'MsgBox wina
+'MsgBox winb
+rankinga = rankinga + kf * (1 - wina)
+rankingb = rankingb - kf * winb
+'MsgBox rankinga
+'MsgBox rankingb
+'MsgBox rankingc
+'MsgBox rankingd
+ratinga = 10 ^ (rankinga / 400)
+ratingb = 10 ^ (rankingb / 400)
+ratingc = 10 ^ (rankingc / 400)
+ratingd = 10 ^ (rankingd / 400)
+
+'MsgBox ratinga
+'MsgBox ratingb
+'MsgBox ratingc
+'MsgBox ratingd
+End Sub
+Sub Przycisk2_Kliknięcie()
+Dim rankinga As Double
+Dim rankingb As Double
+Dim rankingc As Double
+Dim rankingd As Double
+Dim kf As Double
+Dim ratinga As Double
+Dim ratingb As Double
+Dim ratingc As Double
+Dim ratingd As Double
+Dim wina As Double
+Dim winb As Double
+Dim add As Double
+Dim down As Double
+Cells(11, 5) = Application.WorksheetFunction.VLookup(Cells(10, 5), Range("R:S"), 2, 0)
+Cells(11, 6) = Application.WorksheetFunction.VLookup(Cells(10, 6), Range("R:S"), 2, 0)
+Cells(11, 7) = Application.WorksheetFunction.VLookup(Cells(10, 7), Range("R:S"), 2, 0)
+Cells(11, 8) = Application.WorksheetFunction.VLookup(Cells(10, 8), Range("R:S"), 2, 0)
+rankinga = Worksheets("wzor").Range("E11")
+rankingb = Worksheets("wzor").Range("F11")
+rankingc = Worksheets("wzor").Range("G11")
+rankingd = Worksheets("wzor").Range("H11")
+ratinga = 10 ^ (rankinga / 400)
+ratingb = 10 ^ (rankingb / 400)
+ratingc = 10 ^ (rankingc / 400)
+ratingd = 10 ^ (rankingd / 400)
+kf = 40
+
+
+
+wina = ratinga / (ratinga + ratingd)
+winb = ratingd / (ratinga + ratingd)
+
+rankinga = rankinga + kf * (1 - wina)
+'MsgBox rankinga
+rankingd = rankingd - kf * winb
+'MsgBox rankingd
+ratinga = 10 ^ (rankinga / 400)
+ratingd = 10 ^ (rankingd / 400)
+wina = ratingb / (ratingb + ratingd)
+winb = ratingd / (ratingb + ratingd)
+'MsgBox wina & "   " & winb
+rankingb = rankingb + kf * (1 - wina)
+rankingd = rankingd - kf * winb
+'MsgBox rankingb & "     " & rankingd
+ratingb = 10 ^ (rankingb / 400)
+ratingd = 10 ^ (rankingd / 400)
+'MsgBox ratingb & "    " & ratingd
+wina = ratingc / (ratingc + ratingd)
+winb = ratingd / (ratingc + ratingd)
+rankingc = rankingc + kf * (1 - wina)
+rankingd = rankingd - kf * winb
+'MsgBox wina
+'MsgBox winb
+'MsgBox rankingc
+'MsgBox rankingd
+ratingc = 10 ^ (rankingc / 400)
+ratingd = 10 ^ (rankingd / 400)
+'MsgBox ratingc
+'MsgBox ratingd
+wina = ratinga / (ratinga + ratingc)
+winb = ratingc / (ratinga + ratingc)
+rankinga = rankinga + kf * (1 - wina)
+rankingc = rankingc - kf * winb
+'MsgBox rankinga
+'MsgBox rankingc
+ratinga = 10 ^ (rankinga / 400)
+ratingb = 10 ^ (rankingb / 400)
+ratingc = 10 ^ (rankingc / 400)
+ratingd = 10 ^ (rankingd / 400)
+'MsgBox ratinga
+'MsgBox ratingb
+'MsgBox ratingc
+'MsgBox ratingd
+wina = ratingb / (ratingb + ratingc)
+winb = ratingc / (ratingb + ratingc)
+
+rankingb = rankingb + kf * (1 - wina)
+rankingc = rankingc - kf * winb
+'MsgBox rankingb
+'MsgBox rankingc
+ratingb = 10 ^ (rankingb / 400)
+ratingc = 10 ^ (rankingc / 400)
+'MsgBox ratingb
+'MsgBox ratingc
+wina = ratinga / (ratinga + ratingb)
+winb = ratingb / (ratinga + ratingb)
+'MsgBox wina
+'MsgBox winb
+rankinga = rankinga + kf * (1 - wina)
+rankingb = rankingb - kf * winb
+'MsgBox rankinga
+'MsgBox rankingb
+'MsgBox rankingc
+'MsgBox rankingd
+ratinga = 10 ^ (rankinga / 400)
+ratingb = 10 ^ (rankingb / 400)
+ratingc = 10 ^ (rankingc / 400)
+ratingd = 10 ^ (rankingd / 400)
+
+'MsgBox ratinga
+'MsgBox ratingb
+'MsgBox ratingc
+'MsgBox ratingd
+Worksheets("wzor").Range("M1").Value = rankinga
+Worksheets("wzor").Range("M2").Value = rankingb
+Worksheets("wzor").Range("M3").Value = rankingc
+ Worksheets("wzor").Range("M4").Value = rankingd
+ 
+ Cells(WorksheetFunction.Match(Range("E10").Value, Range("R:R"), 0), 19).Value = rankinga
+ Cells(WorksheetFunction.Match(Range("F10").Value, Range("R:R"), 0), 19).Value = rankingb
+ Cells(WorksheetFunction.Match(Range("G10").Value, Range("R:R"), 0), 19).Value = rankingc
+ Cells(WorksheetFunction.Match(Range("H10").Value, Range("R:R"), 0), 19).Value = rankingd
+ 
+ 
+
+End Sub
+
